@@ -2,7 +2,7 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "Build cpp",
+            "label": "g++ win - build active file",
             "command": "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\g++.exe",
             "args": [
                 "-g",
@@ -18,7 +18,28 @@
                 "kind": "build",
                 "isDefault": true
             }
-        }
+        },
+        {
+            "type": "shell",
+            "label": "clang++ mac - build active file",
+            "command": "/usr/bin/clang++",
+            "args": [
+              "-std=c++17",
+              "-stdlib=libc++",
+              "-g",
+              "${file}",
+              "-o",
+              "${workspaceFolder}/build/${fileBasenameNoExtension}"
+            ],
+            "options": {
+              "cwd": "${workspaceFolder}/build"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
+          }
     ],
     "version": "2.0.0"
 }
