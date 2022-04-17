@@ -1,17 +1,32 @@
+/* Algorithm */
 #include <algorithm>
-#include <cstdio>
-#include <cstdlib>
-#include <cctype>
-#include <cmath>
-#include <iostream>
-#include <sstream>
+
+/* Error */
+#include <cassert>
+#include <exception>
+#include <stdexcept>
+
+/* String */
 #include <string>
-#include <utility>
+
+/* Contains */
+#include <array>
+#include <deque>
+#include <forward_list>
+#include <list>
+#include <map>
+#include <queue>
+#include <set>
+#include <span>
+#include <stack>
+#include <unordered_map>
+#include <unordered_set>
 #include <vector>
-#include <fstream>
+
 using namespace std;
 
-class Solution {
+class Solution
+{
 private:
 public:
 };
