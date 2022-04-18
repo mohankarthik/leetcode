@@ -27,6 +27,9 @@
 #include <sstream>
 #include <iostream>
 
-#include "../common/ListNode.h"
+/* Custom includes */
+#include "ListNode.h"
+#include "TreeNode.h"
+#include "Node.h"
 
 using namespace std;
