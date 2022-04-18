@@ -1,14 +1,4 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <map>
-#include <set>
-#include <queue>
-#include <stack>
-#include <assert.h>
-#include <bits/stdc++.h>
-
-using namespace std;
+#include "../common/Includes.h"
 
 class Solution
 {
@@ -49,15 +39,3 @@ public:
         return _stack.empty();
     }
 };
-
-int main(void)
-{
-    Solution *sol = new Solution();
-    assert(sol->isValid("()") == true);
-    assert(sol->isValid("()[]{}") == true);
-    assert(sol->isValid("(]") == false);
-    assert(sol->isValid("([)]") == false);
-    assert(sol->isValid("{[]}") == true);
-    assert(sol->isValid("{{{") == false);
-    assert(sol->isValid("]") == false);
-}

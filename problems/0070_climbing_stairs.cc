@@ -1,20 +1,4 @@
-#include <algorithm>
-#include <vector>
-#include <queue>
-#include <set>
-#include <map>
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <stdio.h>
-#include <stdint.h>
-#include <string.h>
-#include <stddef.h>
-#include <stdbool.h>
-#include <math.h>
-#include <assert.h>
-
-using namespace std;
+#include "../common/Includes.h"
 
 class Solution
 {

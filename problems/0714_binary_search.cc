@@ -1,9 +1,4 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-#include <assert.h>
-using namespace std;
-
+#include "../common/Includes.h"
 
 class Solution {
 public:

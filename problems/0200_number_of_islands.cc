@@ -1,16 +1,4 @@
-#include <algorithm>
-#include <cstdio>
-#include <cstdlib>
-#include <cctype>
-#include <cmath>
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <utility>
-#include <vector>
-#include <fstream>
-#include <queue>
-using namespace std;
+#include "../common/Includes.h"
 
 class Solution {
 private:

@@ -1,16 +1,4 @@
-#include <algorithm>
-#include <cstdio>
-#include <cstdlib>
-#include <cctype>
-#include <cmath>
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <utility>
-#include <queue>
-#include <vector>
-#include <fstream>
-using namespace std;
+#include "../common/Includes.h"
 
 struct PriorityQueueComparator {
     bool operator()(pair<int,int> const &p1, pair<int,int> const &p2) {

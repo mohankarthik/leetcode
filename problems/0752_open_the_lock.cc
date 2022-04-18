@@ -1,19 +1,4 @@
-#include <algorithm>
-#include <cstdio>
-#include <cstdlib>
-#include <cctype>
-#include <cmath>
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <utility>
-#include <vector>
-#include <queue>
-#include <set>
-#include <unordered_set>
-#include <unordered_map>
-#include <fstream>
-using namespace std;
+#include "../common/Includes.h"
 
 class Solution {
     static const int LENGTH = 4;

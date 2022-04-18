@@ -23,18 +23,10 @@
 #include <unordered_set>
 #include <vector>
 
+/* IO */
+#include <sstream>
+#include <iostream>
+
 #include "../common/ListNode.h"
 
 using namespace std;
-
-class Solution
-{
-private:
-public:
-};
-
-int main(void)
-{
-    Solution *sol = new Solution();
-    return 0;
-}
