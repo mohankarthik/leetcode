@@ -94,6 +94,7 @@
         "queue": "cpp",
         "stack": "cpp",
         "variant": "cpp",
-        "__functional_base": "cpp"
+        "__functional_base": "cpp",
+        "span": "cpp"
     }
 }
