@@ -78,6 +78,10 @@ public:
             // If we've reached the destination
             if (curr.row == n-1 and curr.col == m-1)
                 return curr.dist;
+
+            // Check if we can steamroll to our destination
+            if (curr.estimation - curr.dist <= curr.elim_left)
+                return curr.estimation;
             
             // if we've hit an obstacle
             if (grid[curr.row][curr.col] == 1) {
