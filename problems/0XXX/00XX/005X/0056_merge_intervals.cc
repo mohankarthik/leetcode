@@ -57,66 +57,27 @@ bool comparator(const MyStruct& lhs, const MyStruct& rhs) {
 // pass it to sort:
 sort(vec.begin(), vec.end(), &comparator);
 */
+#include "../../../../common/Includes.h"
 
+class Solution {
+public:
+    vector<vector<int>> merge(vector<vector<int>>& intervals) {
+        sort(intervals.begin(), intervals.end());
+        
+        vector<vector<int>> answer;
+        for (auto interval: intervals) {
+            if (answer.empty() or answer.back()[1] < interval[0])
+                answer.push_back(interval);
+            else
+                answer.back()[1] = max(answer.back()[1], interval[1]);
+        }
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-using namespace std;
-
-struct pair_sort {
-  bool operator ()(const pair<int, bool> &x, const pair<int, bool> &y) const {
-    if (x.first != y.first)
-      return x.first < y.first;
-    return x.second == true ? true : false;
-  }
+        return answer;
+    }
 };
 
-vector<vector<int>> mergeIntervals(vector<vector<int>>& intervals) {
-  vector<pair<int,bool>> nodes;
-  
-  // Fill the nodes
-  for (auto interval: intervals) {
-    nodes.push_back({interval[0],true});
-    nodes.push_back({interval[1],false});
-  }
-  
-  // Sort the array
-  sort(nodes.begin(), nodes.end(), pair_sort());
-  
-  /**
-  [[1,3],[3,6],[3,10],[15,18]]
-  XXXX           -1
-  1 - True - 1 - 1
-  3 - True - 2 - 1
-  3 - True - 3 - 1
-  3 - False - 2 - 1
-  6 - False - 1 - 1
-  10 - False - 0 - -1 {{1,10}}
-  15 - True - 1 - 15
-  18 - False - 0 - -1 {{1,10},{15,18}}
-  */
-  vector<vector<int>> answer;
-  int st = -1;
-  int depth = 0;
-  for (auto node: nodes) {
-    if (node.second == true)
-      depth++;
-    else
-      depth--;
-    
-    if (depth == 1 and st == -1)
-      st = node.first;
-    else if (depth == 0) {
-      answer.push_back({st,node.first});
-      st = -1;
-    }
-  }
-  
-  return answer;
-}
-
 int main() {
+    Solution *sol = new Solution();
   vector<vector<int>> input{
     {1,3},
     {3,6},
@@ -124,7 +85,7 @@ int main() {
     {3,10},
     {15,18}
   };
-  auto output = mergeIntervals(input);
+  auto output = sol->merge(input);
   for (auto row: output) {
     for (auto val: row) {
       cout << val << " ";
