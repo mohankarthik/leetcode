@@ -37,6 +37,19 @@
             "externalConsole": false,
             "MIMode": "lldb",
             "preLaunchTask": "clang++ mac - build active file"
-          }
+        },
+        {
+            "name": "clang mac - Build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}/build",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "clang mac - build active file"
+        }
     ]
 }

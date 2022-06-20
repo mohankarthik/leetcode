@@ -95,6 +95,7 @@
         "stack": "cpp",
         "variant": "cpp",
         "__functional_base": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "stdio.h": "c"
     }
 }
