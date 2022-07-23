@@ -11,6 +11,7 @@ public:
     Node* prev;
     Node* next;
     Node* child;
+    vector<Node*> children;
     Node* random;
     vector<Node*> neighbors;
 
@@ -37,6 +38,11 @@ public:
         left(_left), right(_right), 
         prev(NULL), next(_next), child(NULL), 
         random(NULL) {}
+
+    Node(int _val, vector<Node*> _children) {
+        val = _val;
+        children = _children;
+    }
 
     Node(int _val, vector<Node*> _neighbors) :
         val(_val), 
